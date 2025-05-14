@@ -40,6 +40,12 @@ if vim.g.neovide then
   require 'config.neovide'
 end
 
+vim.keymap.set('n', '<leader>gg', require('scripts.lazygit').toggle, {
+  desc = 'Toggle LazyGit',
+  noremap = true,
+  silent = true,
+})
+
 -- Make line numbers default
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -140,6 +146,16 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Resize
+vim.keymap.set('n', '<A-h>', ':vertical resize -2<CR>', { desc = 'Shrink window horizontally', silent = true })
+vim.keymap.set('n', '<A-l>', ':vertical resize +2<CR>', { desc = 'Expand window horizontally', silent = true })
+vim.keymap.set('n', '<A-j>', ':resize -2<CR>', { desc = 'Shrink window vertically', silent = true })
+vim.keymap.set('n', '<A-k>', ':resize +2<CR>', { desc = 'Expand window vertically', silent = true })
+
+-- Tab Navigation
+vim.keymap.set('n', 'H', 'gT', { desc = 'Go to previous tab' })
+vim.keymap.set('n', 'L', 'gt', { desc = 'Go to next tab' })
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
@@ -882,6 +898,9 @@ require('lazy').setup({
 
       -- Starter
       require('mini.starter').setup()
+
+      --icons
+      require('mini.icons').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
