@@ -37,7 +37,7 @@ vim.g.have_nerd_font = true
 --  For more options, you can see `:help option-list`
 --
 if vim.g.neovide then
-  require "config.neovide"
+  require 'config.neovide'
 end
 
 -- Make line numbers default
@@ -843,19 +843,19 @@ require('lazy').setup({
     config = function()
       vim.cmd.colorscheme 'flexoki-dark' -- or 'flexoki-light' if you prefer
       vim.cmd [[
-  hi Normal guibg=NONE ctermbg=NONE
-  hi NormalNC guibg=NONE ctermbg=NONE
-  hi EndOfBuffer guibg=NONE ctermbg=NONE
-  hi Pmenu guibg=NONE ctermbg=NONE
-  hi PmenuSel guibg=NONE ctermbg=NONE
-  hi PmenuSbar guibg=NONE ctermbg=NONE
-  hi PmenuThumb guibg=NONE ctermbg=NONE
-  hi FloatBorder guibg=NONE ctermbg=NONE
-  hi NormalFloat guibg=NONE ctermbg=NONE
-  hi MsgArea guibg=NONE ctermbg=NONE
-  hi MsgSeparator guibg=NONE ctermbg=NONE
-  hi StatusLine guibg=NONE ctermbg=NONE
-]]
+      hi Normal guibg=#202020 ctermbg=NONE
+      hi NormalNC guibg=#202020 ctermbg=NONE
+      hi EndOfBuffer guibg=#202020 ctermbg=NONE
+      hi Pmenu guibg=#202020 ctermbg=NONE
+      hi PmenuSel guibg=#202020 ctermbg=NONE
+      hi PmenuSbar guibg=#202020 ctermbg=NONE
+      hi PmenuThumb guibg=#202020 ctermbg=NONE
+      hi FloatBorder guibg=#202020 ctermbg=NONE
+      hi NormalFloat guibg=#202020 ctermbg=NONE
+      hi MsgArea guibg=#202020 ctermbg=NONE
+      hi MsgSeparator guibg=#202020 ctermbg=NONE
+      hi StatusLine guibg=#202020 ctermbg=NONE
+    ]]
     end,
   },
 
@@ -879,6 +879,9 @@ require('lazy').setup({
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+
+      -- Starter
+      require('mini.starter').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
