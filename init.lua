@@ -861,7 +861,7 @@ require('lazy').setup({
       vim.cmd [[
       hi Normal guibg=#202020 ctermbg=NONE
       hi NormalNC guibg=#202020 ctermbg=NONE
-      hi EndOfBuffer guibg=#202020 ctermbg=NONE
+      hi EndOfBuffer guifg=bg guibg=#202020
       hi Pmenu guibg=#202020 ctermbg=NONE
       hi PmenuSel guibg=#202020 ctermbg=NONE
       hi PmenuSbar guibg=#202020 ctermbg=NONE
