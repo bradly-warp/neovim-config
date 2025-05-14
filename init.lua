@@ -40,8 +40,8 @@ if vim.g.neovide then
   require 'config.neovide'
 end
 
-vim.keymap.set('n', '<leader>gg', require('scripts.lazygit').toggle, {
-  desc = 'Toggle LazyGit',
+vim.keymap.set('n', '<leader>lg', require('scripts.lazygit').toggle, {
+  desc = 'Toggle [L]azy[G]it',
   noremap = true,
   silent = true,
 })
