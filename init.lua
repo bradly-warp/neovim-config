@@ -722,20 +722,20 @@ require('lazy').setup({
     },
     opts = {
       notify_on_error = false,
-      format_on_save = function(bufnr)
-        -- Disable "format_on_save lsp_fallback" for languages that don't
-        -- have a well standardized coding style. You can add additional
-        -- languages here or re-enable it for the disabled ones.
-        local disable_filetypes = { c = true, cpp = true }
-        if disable_filetypes[vim.bo[bufnr].filetype] then
-          return nil
-        else
-          return {
-            timeout_ms = 500,
-            lsp_format = 'fallback',
-          }
-        end
-      end,
+      -- format_on_save = function(bufnr)
+      --   -- Disable "format_on_save lsp_fallback" for languages that don't
+      --   -- have a well standardized coding style. You can add additional
+      --   -- languages here or re-enable it for the disabled ones.
+      --   local disable_filetypes = { c = true, cpp = true }
+      --   if disable_filetypes[vim.bo[bufnr].filetype] then
+      --     return nil
+      --   else
+      --     return {
+      --       timeout_ms = 500,
+      --       lsp_format = 'fallback',
+      --     }
+      --   end
+      -- end,
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
@@ -851,27 +851,30 @@ require('lazy').setup({
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
-    --
+    -- 'ellisonleao/gruvbox.nvim',
+    -- priority = 1000,
+    -- config = true,
+    -- vim.cmd.colorscheme 'gruvbox',
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'kepano/flexoki-neovim',
     name = 'flexoki',
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'flexoki-dark' -- or 'flexoki-light' if you prefer
-      vim.cmd [[
-      hi Normal guibg=#202020 ctermbg=NONE
-      hi NormalNC guibg=#202020 ctermbg=NONE
-      hi EndOfBuffer guifg=bg guibg=#202020
-      hi Pmenu guibg=#202020 ctermbg=NONE
-      hi PmenuSel guibg=#202020 ctermbg=NONE
-      hi PmenuSbar guibg=#202020 ctermbg=NONE
-      hi PmenuThumb guibg=#202020 ctermbg=NONE
-      hi FloatBorder guibg=#202020 ctermbg=NONE
-      hi NormalFloat guibg=#202020 ctermbg=NONE
-      hi MsgArea guibg=#202020 ctermbg=NONE
-      hi MsgSeparator guibg=#202020 ctermbg=NONE
-      hi StatusLine guibg=#202020 ctermbg=NONE
-    ]]
+        vim.cmd [[
+        hi Normal guibg=#202020 ctermbg=NONE
+        hi NormalNC guibg=#202020 ctermbg=NONE
+        hi EndOfBuffer guifg=bg guibg=#202020
+        hi Pmenu guibg=#202020 ctermbg=NONE
+        hi PmenuSel guibg=#202020 ctermbg=NONE
+        hi PmenuSbar guibg=#202020 ctermbg=NONE
+        hi PmenuThumb guibg=#202020 ctermbg=NONE
+        hi FloatBorder guibg=#202020 ctermbg=NONE
+        hi NormalFloat guibg=#202020 ctermbg=NONE
+        hi MsgArea guibg=#202020 ctermbg=NONE
+        hi MsgSeparator guibg=#202020 ctermbg=NONE
+        hi StatusLine guibg=#202020 ctermbg=NONE
+      ]]
     end,
   },
 
