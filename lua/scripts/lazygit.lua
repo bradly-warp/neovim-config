@@ -62,8 +62,6 @@ function M.toggle()
       end,
     })
 
-    vim.api.nvim_buf_set_keymap(term_bufnr, 't', '<Esc>', [[<C-\><C-n>:lua require("scripts.lazygit").toggle()<CR>]], { noremap = true, silent = true })
-
     vim.api.nvim_create_augroup('LazyGitFloatFocus', { clear = true })
 
     -- Hide the window if user switches focus away
