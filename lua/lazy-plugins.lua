@@ -13,7 +13,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/blink-cmp',
 
-  require 'kickstart/plugins/gruvbox',
+  require 'kickstart/plugins/theme',
 
   require 'kickstart/plugins/todo-comments',
 
