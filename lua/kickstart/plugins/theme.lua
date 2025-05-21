@@ -1,16 +1,17 @@
 return {
   {
-    'AlexvZyl/nordic.nvim',
-    name = 'nordic',
+    'loctvl842/monokai-pro.nvim',
+    name = 'monokai-pro',
+    lazy = false,
     priority = 1000,
     config = function()
-      require('nordic').setup {
-        transparent = {
-          bg = true,
-          float = false,
-        },
+      require('monokai-pro').setup {
+        transparent_background = true,
+        terminal_colors = true,
+        devicons = true,
+        filter = 'spectrum',
       }
-      require('nordic').load()
+      vim.cmd.colorscheme 'monokai-pro'
     end,
   },
 }
