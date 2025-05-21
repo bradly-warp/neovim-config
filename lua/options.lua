@@ -16,6 +16,7 @@ vim.o.mouse = 'a'
 vim.o.signcolumn = 'yes'
 vim.o.inccommand = 'split'
 vim.o.colorcolumn = '81'
+vim.o.tabstop = 2
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 vim.schedule(function()
