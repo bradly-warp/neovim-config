@@ -252,7 +252,16 @@ return {
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format Lua code
+        -- Formatters & Tools
+        'stylua', -- Lua formatter
+        'prettierd', -- JS/TS formatter
+        'isort', -- Python import sorter
+        'black', -- Python formatter
+
+        -- LSPs (if not covered by mason-lspconfig)
+        'csharp_ls',
+        'csharpier',
+        'gdtoolkit',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
