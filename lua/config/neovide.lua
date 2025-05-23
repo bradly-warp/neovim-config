@@ -4,7 +4,7 @@ vim.g.neovide_cursor_trail_size = 0
 vim.g.neovide_cursor_vfx_mode = ''
 vim.g.neovide_cursor_animate_command_line = false
 vim.g.neovide_cursor_animate_in_insert_mode = false
-vim.g.neovide_hide_mouse_when_typing = true
+-- vim.g.neovide_hide_mouse_when_typing = true
 
 vim.g.neovide_font_size = 12
 
